@@ -45,7 +45,7 @@ return {
 			{ "<leader>gr", function() Snacks.gitbrowse() end, desc = "Git Log" },
 			{ "<leader>gh", function() Snacks.lazygit() end, desc = "Git Log" },
 			{ "<leader>gl", function() Snacks.lazygit.log() end, desc = "Git Log" },
-			{ "<leader>gL", function() Snacks.lazygit.log() end, desc = "Git Log" },
+			{ "<leader>gL", function() Snacks.lazygit.log_file() end, desc = "Git Log" },
 			-- Terminal
 			{ "<leader>t",      function() Snacks.terminal() end, desc = "Toggle Terminal" },
 		}
