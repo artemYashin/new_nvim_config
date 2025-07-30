@@ -13,7 +13,24 @@ return {
 			explorer = { enabled = true },
 			indent = { enabled = true },
 			input = { enabled = true },
-			picker = { enabled = true, frecency = true },
+			picker = {
+				enabled = true,
+				frecency = true,
+				sources = {
+					explorer = {
+						win = {
+							list = {
+								keys = {
+									["o"] = "confirm"
+								}
+							}
+						},
+						layout = {
+							auto_hide = {"input"}
+						}
+					},
+				}
+			},
 			notifier = { enabled = true },
 			quickfile = { enabled = true },
 			scope = { enabled = true },
@@ -33,6 +50,8 @@ return {
 			{ "gr", function() Snacks.picker.lsp_references() end, nowait = true, desc = "References" },
 			{ "gd", function() Snacks.picker.lsp_definitions() end, desc = "Goto Definition" },
 			{ "gD", function() Snacks.picker.lsp_declarations() end, desc = "Goto Declaration" },
+			-- Explorer
+			{ "<leader>d", function() Snacks.explorer() end, desc = "Goto Declaration" },
 			-- Buffers
 			{ "<leader>fb", function() Snacks.picker.buffers() end, desc = "Buffers" },
 			{ "<A-c>", function() Snacks.bufdelete.delete(opts) end, desc = "Buffer delete" },
