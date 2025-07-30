@@ -41,8 +41,10 @@ return {
 			{ "<leader>/", function() Snacks.picker.grep() end, desc = "Grep" },
 			-- Git
 			{ "<leader>gb", function() Snacks.picker.git_branches() end, desc = "Git Branches" },
-			{ "<leader>gl", function() Snacks.picker.git_log() end, desc = "Git Log" },
-			{ "<leader>gs", function() Snacks.picker.git_status() end, desc = "Git Status" },
+			{ "<leader>gG", function() Snacks.git.blame_line() end, desc = "Git Branches" },
+			{ "<leader>gr", function() Snacks.gitbrowse() end, desc = "Git Log" },
+			{ "<leader>gh", function() Snacks.lazygit() end, desc = "Git Log" },
+			{ "<leader>gl", function() Snacks.lazygit.log() end, desc = "Git Log" },
 			-- Terminal
 			{ "<leader>t",      function() Snacks.terminal() end, desc = "Toggle Terminal" },
 		}
