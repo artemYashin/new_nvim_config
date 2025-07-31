@@ -14,6 +14,7 @@ return {
 			indent = { enabled = true },
 			input = { enabled = true },
 			picker = {
+				hidden = true,
 				enabled = true,
 				frecency = true,
 				sources = {
@@ -26,7 +27,10 @@ return {
 							}
 						},
 						layout = {
-							auto_hide = {"input"}
+							auto_hide = {"input"},
+							layout = {
+								width = 0.27
+							}
 						}
 					},
 				}
@@ -51,7 +55,7 @@ return {
 			{ "gd", function() Snacks.picker.lsp_definitions() end, desc = "Goto Definition" },
 			{ "gD", function() Snacks.picker.lsp_declarations() end, desc = "Goto Declaration" },
 			-- Explorer
-			{ "<leader>d", function() Snacks.explorer() end, desc = "Goto Declaration" },
+			-- { "<leader>d", function() Snacks.explorer() end, desc = "Goto Declaration" },
 			-- Buffers
 			{ "<leader>fb", function() Snacks.picker.buffers() end, desc = "Buffers" },
 			{ "<A-c>", function() Snacks.bufdelete.delete(opts) end, desc = "Buffer delete" },
