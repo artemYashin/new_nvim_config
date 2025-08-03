@@ -18,8 +18,8 @@ return {
 				changedelete = { text = '~' },
 				untracked    = { text = '┆' },
 			},
-			signs_staged_enable = true,
-			signcolumn = true,  -- Toggle with `:Gitsigns toggle_signs`
+			signs_staged_enable = false,
+			signcolumn = false,  -- Toggle with `:Gitsigns toggle_signs`
 			numhl      = false, -- Toggle with `:Gitsigns toggle_numhl`
 			linehl     = false, -- Toggle with `:Gitsigns toggle_linehl`
 			word_diff  = false, -- Toggle with `:Gitsigns toggle_word_diff`
@@ -54,4 +54,6 @@ return {
 		vim.keymap.set("n", "<leader>gg", ":Gitsigns toggle_current_line_blame<CR>", {silent = true, noremap = true})
 	end
 }
-
+-- --
+-- --
+-- return {}
