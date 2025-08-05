@@ -44,7 +44,7 @@ return {
 			title = '🤖 AI Assistant',
 			zindex = 100, -- Ensure window stays on top
 		    },
-		    insert_at_end = true,
+		    insert_at_end = false,
 		    headers = {
 			user = '👤 You: ',
 			assistant = '🤖 Copilot: ',
