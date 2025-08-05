@@ -37,7 +37,7 @@ This Neovim setup is built around [lazy.nvim](https://github.com/folke/lazy.nvim
    git clone <your-repo> ~/.config/nvim
    ```
 
-2. **Install Neovim (v0.9+ recommended).**
+2. **Install Neovim (v0.10+ recommended).**
 
 3. **Install required system packages:**  
 Some plugins and LSP servers require extra binaries. Recommended packages:
