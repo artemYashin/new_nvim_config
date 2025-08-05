@@ -29,6 +29,9 @@ return {
 				enabled = true,
 				frecency = true,
 				sources = {
+					select = {
+						focus = 'list'
+					},
 					explorer = {
 						win = {
 							list = {

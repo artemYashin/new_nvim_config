@@ -4,3 +4,11 @@ vim.diagnostic.config({virtual_text=true})
 
 require("core.keymaps")
 require("core.lazy")
+vim.opt.splitright = true
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "copilot-chat",
+  callback = function()
+    vim.cmd("TSBufEnable highlight")
+  end,
+})
+
