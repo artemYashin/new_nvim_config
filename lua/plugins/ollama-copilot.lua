@@ -1,0 +1,30 @@
+return {
+	{
+		"milanglacier/minuet-ai.nvim",
+		config = function()
+			require("minuet").setup({
+				-- Your configuration options here
+				provider = "openai_fim_compatible",
+				n_completions = 1,
+				context_window = 512,
+				config = "debug",
+
+				provider_options = {
+					openai_fim_compatible = {
+						-- For Windows users, TERM may not be present in environment variables.
+						-- Consider using APPDATA instead.
+						api_key = "TERM",
+						name = "Ollama",
+						end_point = "http://172.23.16.1:11434/v1/completions",
+						model = "qwen2.5-coder:7b",
+						optional = {
+							max_tokens = 56,
+							top_p = 0.9,
+						},
+					},
+				},
+			})
+		end,
+	},
+	{ "nvim-lua/plenary.nvim" },
+}
