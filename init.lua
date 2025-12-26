@@ -57,7 +57,7 @@ vim.keymap.set({ "n", "v" }, "<leader>cl", "<cmd>CodeCompanionChat Toggle<cr>", 
 -- Visual selection to add content to chat
 vim.keymap.set("v", "<leader>cv", "<cmd>CodeCompanionChat Add<cr>", { noremap = true, silent = true })
 -- Open actions menu for CodeCompanion
-vim.keymap.set({ "n", "v" }, "<leader>ca", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true })
+vim.keymap.set({ "n", "v" }, "<leader>cp", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true })
 -- Send current buffer to CodeCompanion
 vim.keymap.set("n", "<leader>cc", function()
 	PromptToCommand("n")
