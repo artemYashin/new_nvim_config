@@ -35,6 +35,10 @@ return {
 		lazy = false, -- neo-tree will lazily load itself
 		config = function()
 			require("neo-tree").setup({
+				sources = {
+					"filesystem",
+					"document_symbols",
+				},
 				window = {
 					auto_expand_width = true,
 					mappings = {

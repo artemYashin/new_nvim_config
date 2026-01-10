@@ -3,17 +3,17 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 		config = function()
-			require('nvim-treesitter.configs').setup({
-				ensure_installed = {"bash", "html", "lua", "markdown", "typescript", "tsx"},
+			require("nvim-treesitter.configs").setup({
+				ensure_installed = { "bash", "html", "lua", "markdown", "typescript", "tsx" },
 				autoInstall = true,
 				hightlight = {
 					enabled = true,
 				},
-				indent = {enabled = true}
+				indent = { enabled = true },
 			})
-		end
+		end,
 	},
 	{
 		"nvim-treesitter/nvim-treesitter-context",
-	}
+	},
 }

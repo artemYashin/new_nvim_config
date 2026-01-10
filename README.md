@@ -49,11 +49,11 @@ Some plugins and LSP servers require extra binaries. Recommended packages:
 - `python3` (for Python LSP and plugins)
 - `lazygit` (required for lazygit integration)
    Install on Ubuntu/Debian:
-   ```sh
+   ```bash
    sudo apt install git curl ripgrep fd-find nodejs npm python3 
    ```
    On Arch:
-   ```sh
+   ```bash
    sudo pacman -S git curl ripgrep fd nodejs npm python python-pip
    ```
 4. **Start Neovim:**  
@@ -61,12 +61,12 @@ Some plugins and LSP servers require extra binaries. Recommended packages:
 
 5. **Install Treesitter parsers:**  
    Inside Neovim, run:
-   ```
+   ```bash
    :TSInstall bash html lua typescript javascript
    ```
 
 6. **Check LSP servers:**  
-   ```
+   ```bash
    :Mason
    ```
 
