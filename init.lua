@@ -6,6 +6,7 @@ require("core.keymaps")
 require("core.lazy")
 
 vim.opt.splitright = true
+
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "codecompletion",
 	callback = function()
