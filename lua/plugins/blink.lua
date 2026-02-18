@@ -40,13 +40,12 @@ return {
 			completion = {
 				documentation = {
 					window = {
-						border = "rounded",
+						border = "none",
 					},
 					auto_show = true,
 					auto_show_delay_ms = 200,
 				},
 				menu = {
-					border = "rounded",
 					draw = {
 						columns = { { "kind_icon", "label", "label_description", gap = 1 }, { "source_name" } },
 					},

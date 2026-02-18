@@ -9,7 +9,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "ts_ls", "eslint" },
+				ensure_installed = { "ts_ls", "eslint", "lua_ls" },
 			})
 		end,
 	},
@@ -20,6 +20,27 @@ return {
 			local lspconfig = require("lspconfig")
 			lspconfig["ts_ls"].setup({ capabilities = capabilities })
 			lspconfig["eslint"].setup({ capabilities = capabilities })
+
+			lspconfig.lua_ls.setup({
+				capabilities = capabilities,
+				settings = {
+					Lua = {
+						runtime = {
+							version = "LuaJIT",
+						},
+						diagnostics = {
+							globals = { "vim" },
+						},
+						workspace = {
+							library = vim.api.nvim_get_runtime_file("", true),
+							checkThirdParty = false,
+						},
+						telemetry = {
+							enable = false,
+						},
+					},
+				},
+			})
 
 			-- vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
 			vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, bufopts)
