@@ -16,7 +16,11 @@ return {
 			"rcarriga/nvim-notify",
 		},
 		config = function()
-			require("noice").setup({})
+			require("noice").setup({
+				presets = {
+					lsp_doc_border = true
+				}
+			})
 			vim.keymap.set("n", "K", function()
 				if not require("noice.lsp").hover() then
 					return "K"
