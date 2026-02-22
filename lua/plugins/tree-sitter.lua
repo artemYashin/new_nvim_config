@@ -11,6 +11,10 @@ return {
 				},
 				indent = { enabled = true },
 			})
+			vim.api.nvim_create_autocmd('FileType', {
+				pattern = { 'codecompletion', 'twig', 'typescript', 'javascript', 'typescriptreact', 'html', 'json', 'javascriptreact' },
+				callback = function() vim.treesitter.start() end,
+			})
 		end,
 	},
 	{

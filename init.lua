@@ -7,19 +7,6 @@ require("core.lazy")
 
 vim.opt.splitright = true
 
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "codecompletion",
-	callback = function()
-		vim.cmd("TSBufEnable highlight")
-	end,
-})
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "twig",
-	callback = function()
-		vim.cmd("TSBufEnable highlight")
-	end,
-})
-
 function PromptToCommand(mode, defaultPrompt)
 	local run_command = function(input)
 		if not input then
